@@ -17,7 +17,7 @@ namespace SummonerSpells
     public class ApiHandler
     {
 
-        private string ApiKey = "RGAPI-16ba5bcf-5318-4faf-8056-6ffd36b89fcd";
+        private string ApiKey = "";
 
         private HttpClient client = new HttpClient();
 
