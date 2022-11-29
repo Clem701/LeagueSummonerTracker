@@ -1,0 +1,348 @@
+﻿<Window x:Class="SummonerSpells.window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SummonerSpells"
+        mc:Ignorable="d"
+        Title="window2" Height="450" Width="800">
+    <Window.Resources>
+        <!--Flash-->
+        <BitmapImage x:Key="ImageFlash" UriSource="Images\Summoners\Flash.png"/>
+        <BitmapImage x:Key="ImageNoFlash" UriSource="Images\Summoners\NoFlash.png"  />
+
+        <!--Barrier-->
+        <BitmapImage x:Key="ImageBarrier" UriSource="Images\Summoners\Barrier.png"/>
+        <BitmapImage x:Key="ImageNoBarrier" UriSource="Images\Summoners\NoBarrier.png"  />
+
+        <!--Cleanse-->
+        <BitmapImage x:Key="ImageCleanse" UriSource="Images\Summoners\Cleanse.png"/>
+        <BitmapImage x:Key="ImageNoCleanse" UriSource="Images\Summoners\NoCleanse.png"  />
+
+        <!--Exhaust-->
+        <BitmapImage x:Key="ImageExhaust" UriSource="Images\Summoners\Exhaust.png"/>
+        <BitmapImage x:Key="ImageNoExhaust" UriSource="Images\Summoners\NoExhaust.png"  />
+
+        <!--Ghost-->
+        <BitmapImage x:Key="ImageGhost" UriSource="Images\Summoners\Ghost.png"/>
+        <BitmapImage x:Key="ImageNoGhost" UriSource="Images\Summoners\NoGhost.png"  />
+
+        <!--Heal-->
+        <BitmapImage x:Key="ImageHeal" UriSource="Images\Summoners\Heal.png"/>
+        <BitmapImage x:Key="ImageNoHeal" UriSource="Images\Summoners\NoHeal.png"  />
+
+        <!--Ignite-->
+        <BitmapImage x:Key="ImageIgnite" UriSource="Images\Summoners\Ignite.png"/>
+        <BitmapImage x:Key="ImageNoIgnite" UriSource="Images\Summoners\NoIgnite.png"  />
+
+        <!--Smite-->
+        <BitmapImage x:Key="ImageSmite" UriSource="Images\Summoners\Smite.png"/>
+        <BitmapImage x:Key="ImageNoSmite" UriSource="Images\Summoners\NoSmite.png"  />
+
+        <!--Teleport-->
+        <BitmapImage x:Key="ImageTeleport" UriSource="Images\Summoners\Teleport.png"/>
+        <BitmapImage x:Key="ImageNoTeleport" UriSource="Images\Summoners\NoTeleport.png"  />
+
+    </Window.Resources>
+    <Grid>
+        <Label Name="LabelUserName" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="27" Width="120"/>
+        <Label Name="LabelUserRegion" Content="" HorizontalAlignment="Left" Margin="178,10,0,0" VerticalAlignment="Top" Height="27" Width="120"/>
+
+        <!--Enemy Champions-->
+        <Image Name="TopChampion" HorizontalAlignment="Left" Height="53" Margin="150,71,0,0" VerticalAlignment="Top" Width="66"/>
+        <Image Name="JglChampion" HorizontalAlignment="Left" Height="53" Margin="150,135,0,0" VerticalAlignment="Top" Width="66"/>
+        <Image Name="MidChampion" HorizontalAlignment="Left" Height="53" Margin="150,198,0,0" VerticalAlignment="Top" Width="66"/>
+        <Image Name="AdcChampion" HorizontalAlignment="Left" Height="53" Margin="150,263,0,0" VerticalAlignment="Top" Width="66"/>
+        <Image Name="SuppChampion" HorizontalAlignment="Left" Height="53" Margin="150,325,0,0" VerticalAlignment="Top" Width="66"/>
+
+        <!--Flash Buttons-->
+        <Button Name ="BtnTopFlash" Margin="230,78,0,0" Click="TopFlash_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgTopFlash" Source="{StaticResource ImageFlash}" Width="30"/>
+        </Button>
+        <Button Name ="BtnTopNoFlash" Margin="230,78,0,0" Click="TopFlash_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgTopNoFlash" Source="{StaticResource ImageNoFlash}" Width="30" />
+        </Button>
+        <Button Name ="BtnJglFlash" Margin="230,144,0,0" Click="JglFlash_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgJglFlash" Source="{StaticResource ImageFlash}" Width="30"/>
+        </Button>
+        <Button Name ="BtnJglNoFlash" Margin="230,144,0,0" Click="JglFlash_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgJglNoFlash" Source="{StaticResource ImageNoFlash}" Width="30"/>
+        </Button>
+        <Button Name ="BtnMidFlash" Margin="230,204,0,0" Click="MidFlash_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="30" Visibility="Hidden">
+            <Image Name="ImgMidFlash" Source="{StaticResource ImageFlash}" Width="30"/>
+        </Button>
+        <Button Name ="BtnMidNoFlash" Margin="230,204,0,0" Click="MidFlash_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="30" Visibility="Hidden">
+            <Image Name="ImgMidNoFlash" Source="{StaticResource ImageNoFlash}" Width="30"/>
+        </Button>
+        <Button Name ="BtnAdcFlash" Margin="230,269,0,0" Click="AdcFlash_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgAdcFlash" Source="{StaticResource ImageFlash}" Width="30"/>
+        </Button>
+        <Button Name ="BtnAdcNoFlash" Margin="230,269,0,0" Click="AdcFlash_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgAdcNoFlash" Source="{StaticResource ImageNoFlash}" Width="30"/>
+        </Button>
+        <Button Name ="BtnSuppFlash" Margin="230,333,0,0" Click="SuppFlash_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgSuppFlash" Source="{StaticResource ImageFlash}" Width="30"/>
+        </Button>
+        <Button Name ="BtnSuppNoFlash" Margin="230,333,0,0" Click="SuppFlash_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgSuppNoFlash" Source="{StaticResource ImageNoFlash}" Width="30"/>
+        </Button>
+
+        <!--Teleport Buttons-->
+        <Button Name ="BtnTopTeleport" Margin="267,78,0,0" Click="TopTeleport_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgTopTeleport" Source="{StaticResource ImageTeleport}" Width="30"/>
+        </Button>
+        <Button Name ="BtnTopNoTeleport" Margin="267,78,0,0" Click="TopTeleport_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgTopNoTeleport" Source="{StaticResource ImageNoTeleport}" Width="30"/>
+        </Button>
+        <Button Name ="BtnJglTeleport" Margin="267,144,0,0" Click="JglTeleport_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgJglTeleport" Source="{StaticResource ImageTeleport}" Width="30"/>
+        </Button>
+        <Button Name ="BtnJglNoTeleport" Margin="267,144,0,0" Click="JglTeleport_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgJglNoTeleport" Source="{StaticResource ImageNoTeleport}" Width="30"/>
+        </Button>
+        <Button Name ="BtnMidTeleport" Margin="266,204,0,0" Click="MidTeleport_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="32" Visibility="Hidden">
+            <Image Name="ImgMidTeleport" Source="{StaticResource ImageTeleport}" Width="30"/>
+        </Button>
+        <Button Name ="BtnMidNoTeleport" Margin="266,204,0,0" Click="MidTeleport_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="32" Visibility="Hidden">
+            <Image Name="ImgMidNoTeleport" Source="{StaticResource ImageNoTeleport}" Width="30"/>
+        </Button>
+        <Button Name ="BtnAdcTeleport" Margin="267,269,0,0" Click="AdcTeleport_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgAdcTeleport" Source="{StaticResource ImageTeleport}" Width="30"/>
+        </Button>
+        <Button Name ="BtnAdcNoTeleport" Margin="267,269,0,0" Click="AdcTeleport_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgAdcNoTeleport" Source="{StaticResource ImageNoTeleport}" Width="30"/>
+        </Button>
+        <Button Name ="BtnSuppTeleport" Margin="267,333,0,0" Click="SuppTeleport_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgSuppTeleport" Source="{StaticResource ImageTeleport}" Width="30"/>
+        </Button>
+        <Button Name ="BtnSuppNoTeleport" Margin="267,333,0,0" Click="SuppTeleport_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgSuppNoTeleport" Source="{StaticResource ImageNoTeleport}" Width="30"/>
+        </Button>
+
+        <!--Smite Buttons-->
+        <Button Name ="BtnTopSmite" Margin="298,51,0,0" Click="TopSmite_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgTopSmite" Source="{StaticResource ImageSmite}" Width="30"/>
+        </Button>
+        <Button Name ="BtnTopNoSmite" Margin="298,51,0,0" Click="TopSmite_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgTopNoSmite" Source="{StaticResource ImageNoSmite}" Width="30"/>
+        </Button>
+        <Button Name ="BtnJglSmite" Margin="298,95,0,0" Click="JglSmite_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgJglSmite" Source="{StaticResource ImageSmite}" Width="30"/>
+        </Button>
+        <Button Name ="BtnJglNoSmite" Margin="298,95,0,0" Click="JglSmite_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgJglNoSmite" Source="{StaticResource ImageNoSmite}" Width="30"/>
+        </Button>
+        <Button Name ="BtnMidSmite" Margin="298,140,0,0" Click="MidSmite_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgMidSmite" Source="{StaticResource ImageSmite}" Width="30"/>
+        </Button>
+        <Button Name ="BtnMidNoSmite" Margin="298,140,0,0" Click="MidSmite_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgMidNoSmite" Source="{StaticResource ImageNoSmite}" Width="30"/>
+        </Button>
+        <Button Name ="BtnAdcSmite" Margin="298,185,0,0" Click="AdcSmite_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgAdcSmite" Source="{StaticResource ImageSmite}" Width="30"/>
+        </Button>
+        <Button Name ="BtnAdcNoSmite" Margin="298,185,0,0" Click="AdcSmite_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgAdcNoSmite" Source="{StaticResource ImageNoSmite}" Width="30"/>
+        </Button>
+        <Button Name ="BtnSuppSmite" Margin="298,235,0,0" Click="SuppSmite_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgSuppSmite" Source="{StaticResource ImageSmite}" Width="30"/>
+        </Button>
+        <Button Name ="BtnSuppNoSmite" Margin="298,235,0,0" Click="SuppSmite_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgSuppNoSmite" Source="{StaticResource ImageNoSmite}" Width="30"/>
+        </Button>
+
+        <!--Ignite Buttons-->
+        <Button Name ="BtnTopIgnite" Margin="333,51,0,0" Click="TopIgnite_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgTopIgnite" Source="{StaticResource ImageIgnite}" Width="30"/>
+        </Button>
+        <Button Name ="BtnTopNoIgnite" Margin="333,51,0,0" Click="TopIgnite_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgTopNoIgnite" Source="{StaticResource ImageNoIgnite}" Width="30"/>
+        </Button>
+        <Button Name ="BtnJglIgnite" Margin="333,95,0,0" Click="JglIgnite_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgJglIgnite" Source="{StaticResource ImageIgnite}" Width="30"/>
+        </Button>
+        <Button Name ="BtnJglNoIgnite" Margin="333,95,0,0" Click="JglIgnite_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgJglNoIgnite" Source="{StaticResource ImageNoIgnite}" Width="30"/>
+        </Button>
+        <Button Name ="BtnMidIgnite" Margin="333,140,0,0" Click="MidIgnite_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgMidIgnite" Source="{StaticResource ImageIgnite}" Width="30"/>
+        </Button>
+        <Button Name ="BtnMidNoIgnite" Margin="333,140,0,0" Click="MidIgnite_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgMidNoIgnite" Source="{StaticResource ImageNoIgnite}" Width="30"/>
+        </Button>
+        <Button Name ="BtnAdcIgnite" Margin="333,185,0,0" Click="AdcIgnite_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgAdcIgnite" Source="{StaticResource ImageIgnite}" Width="30"/>
+        </Button>
+        <Button Name ="BtnAdcNoIgnite" Margin="333,185,0,0" Click="AdcIgnite_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgAdcNoIgnite" Source="{StaticResource ImageNoIgnite}" Width="30"/>
+        </Button>
+        <Button Name ="BtnSuppIgnite" Margin="333,235,0,0" Click="SuppIgnite_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgSuppIgnite" Source="{StaticResource ImageIgnite}" Width="30"/>
+        </Button>
+        <Button Name ="BtnSuppNoIgnite" Margin="333,235,0,0" Click="SuppIgnite_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgSuppNoIgnite" Source="{StaticResource ImageNoIgnite}" Width="30"/>
+        </Button>
+
+        <!--Heal Buttons-->
+        <Button Name ="BtnTopHeal" Margin="368,51,0,0" Click="TopHeal_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgTopHeal" Source="{StaticResource ImageHeal}" Width="30"/>
+        </Button>
+        <Button Name ="BtnTopNoHeal" Margin="368,51,0,0" Click="TopHeal_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgTopNoHeal" Source="{StaticResource ImageNoHeal}" Width="30"/>
+        </Button>
+        <Button Name ="BtnJglHeal" Margin="368,95,0,0" Click="JglHeal_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgJglHeal" Source="{StaticResource ImageHeal}" Width="30"/>
+        </Button>
+        <Button Name ="BtnJglNoHeal" Margin="368,95,0,0" Click="JglHeal_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgJglNoHeal" Source="{StaticResource ImageNoHeal}" Width="30"/>
+        </Button>
+        <Button Name ="BtnMidHeal" Margin="368,140,0,0" Click="MidHeal_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgMidHeal" Source="{StaticResource ImageHeal}" Width="30"/>
+        </Button>
+        <Button Name ="BtnMidNoHeal" Margin="368,140,0,0" Click="MidHeal_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgMidNoHeal" Source="{StaticResource ImageNoHeal}" Width="30"/>
+        </Button>
+        <Button Name ="BtnAdcHeal" Margin="368,185,0,0" Click="AdcHeal_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgAdcHeal" Source="{StaticResource ImageHeal}" Width="30"/>
+        </Button>
+        <Button Name ="BtnAdcNoHeal" Margin="368,185,0,0" Click="AdcHeal_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgAdcNoHeal" Source="{StaticResource ImageNoHeal}" Width="30"/>
+        </Button>
+        <Button Name ="BtnSuppHeal" Margin="368,235,0,0" Click="SuppHeal_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgSuppHeal" Source="{StaticResource ImageHeal}" Width="30"/>
+        </Button>
+        <Button Name ="BtnSuppNoHeal" Margin="368,235,0,0" Click="SuppHeal_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgSuppNoHeal" Source="{StaticResource ImageNoHeal}" Width="30"/>
+        </Button>
+
+        <!--Exhaust Buttons-->
+        <Button Name ="BtnTopExhaust" Margin="403,51,0,0" Click="TopExhaust_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgTopExhaust" Source="{StaticResource ImageExhaust}" Width="30"/>
+        </Button>
+        <Button Name ="BtnTopNoExhaust" Margin="403,51,0,0" Click="TopExhaust_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgTopNoExhaust" Source="{StaticResource ImageNoExhaust}" Width="30"/>
+        </Button>
+        <Button Name ="BtnJglExhaust" Margin="403,95,0,0" Click="JglExhaust_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgJglExhaust" Source="{StaticResource ImageExhaust}" Width="30"/>
+        </Button>
+        <Button Name ="BtnJglNoExhaust" Margin="403,95,0,0" Click="JglExhaust_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgJglNoExhaust" Source="{StaticResource ImageNoExhaust}" Width="30"/>
+        </Button>
+        <Button Name ="BtnMidExhaust" Margin="403,140,0,0" Click="MidExhaust_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgMidExhaust" Source="{StaticResource ImageExhaust}" Width="30"/>
+        </Button>
+        <Button Name ="BtnMidNoExhaust" Margin="403,140,0,0" Click="MidExhaust_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgMidNoExhaust" Source="{StaticResource ImageNoExhaust}" Width="30"/>
+        </Button>
+        <Button Name ="BtnAdcExhaust" Margin="403,185,0,0" Click="AdcExhaust_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgAdcExhaust" Source="{StaticResource ImageExhaust}" Width="30"/>
+        </Button>
+        <Button Name ="BtnAdcNoExhaust" Margin="403,185,0,0" Click="AdcExhaust_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgAdcNoExhaust" Source="{StaticResource ImageNoExhaust}" Width="30"/>
+        </Button>
+        <Button Name ="BtnSuppExhaust" Margin="403,235,0,0" Click="SuppExhaust_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgSuppExhaust" Source="{StaticResource ImageExhaust}" Width="30"/>
+        </Button>
+        <Button Name ="BtnSuppNoExhaust" Margin="403,235,0,0" Click="SuppExhaust_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgSuppNoExhaust" Source="{StaticResource ImageNoExhaust}" Width="30"/>
+        </Button>
+
+        <!--Barrier Buttons-->
+        <Button Name ="BtnTopBarrier" Margin="403,51,0,0" Click="TopBarrier_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgTopBarrier" Source="{StaticResource ImageBarrier}" Width="30"/>
+        </Button>
+        <Button Name ="BtnTopNoBarrier" Margin="403,51,0,0" Click="TopBarrier_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgTopNoBarrier" Source="{StaticResource ImageNoBarrier}" Width="30"/>
+        </Button>
+        <Button Name ="BtnJglBarrier" Margin="403,95,0,0" Click="JglBarrier_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgJglBarrier" Source="{StaticResource ImageBarrier}" Width="30"/>
+        </Button>
+        <Button Name ="BtnJglNoBarrier" Margin="403,95,0,0" Click="JglBarrier_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgJglNoBarrier" Source="{StaticResource ImageNoBarrier}" Width="30"/>
+        </Button>
+        <Button Name ="BtnMidBarrier" Margin="403,140,0,0" Click="MidBarrier_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgMidBarrier" Source="{StaticResource ImageBarrier}" Width="30"/>
+        </Button>
+        <Button Name ="BtnMidNoBarrier" Margin="403,140,0,0" Click="MidBarrier_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgMidNoBarrier" Source="{StaticResource ImageNoBarrier}" Width="30"/>
+        </Button>
+        <Button Name ="BtnAdcBarrier" Margin="403,185,0,0" Click="AdcBarrier_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgAdcBarrier" Source="{StaticResource ImageBarrier}" Width="30"/>
+        </Button>
+        <Button Name ="BtnAdcNoBarrier" Margin="403,185,0,0" Click="AdcBarrier_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgAdcNoBarrier" Source="{StaticResource ImageNoBarrier}" Width="30"/>
+        </Button>
+        <Button Name ="BtnSuppBarrier" Margin="403,235,0,0" Click="SuppBarrier_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgSuppBarrier" Source="{StaticResource ImageBarrier}" Width="30"/>
+        </Button>
+        <Button Name ="BtnSuppNoBarrier" Margin="403,235,0,0" Click="SuppBarrier_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgSuppNoBarrier" Source="{StaticResource ImageNoBarrier}" Width="30"/>
+        </Button>
+
+        <!--Ghost Buttons-->
+        <Button Name ="BtnTopGhost" Margin="438,51,0,0" Click="TopGhost_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgTopGhost" Source="{StaticResource ImageGhost}" Width="30"/>
+        </Button>
+        <Button Name ="BtnTopNoGhost" Margin="438,51,0,0" Click="TopGhost_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgTopNoGhost" Source="{StaticResource ImageNoGhost}" Width="30"/>
+        </Button>
+        <Button Name ="BtnJglGhost" Margin="438,95,0,0" Click="JglGhost_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgJglGhost" Source="{StaticResource ImageGhost}" Width="30"/>
+        </Button>
+        <Button Name ="BtnJglNoGhost" Margin="438,95,0,0" Click="JglGhost_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgJglNoGhost" Source="{StaticResource ImageNoGhost}" Width="30"/>
+        </Button>
+        <Button Name ="BtnMidGhost" Margin="438,140,0,0" Click="MidGhost_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgMidGhost" Source="{StaticResource ImageGhost}" Width="30"/>
+        </Button>
+        <Button Name ="BtnMidNoGhost" Margin="438,140,0,0" Click="MidGhost_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgMidNoGhost" Source="{StaticResource ImageNoGhost}" Width="30"/>
+        </Button>
+        <Button Name ="BtnAdcGhost" Margin="438,185,0,0" Click="AdcGhost_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgAdcGhost" Source="{StaticResource ImageGhost}" Width="30"/>
+        </Button>
+        <Button Name ="BtnAdcNoGhost" Margin="438,185,0,0" Click="AdcGhost_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgAdcNoGhost" Source="{StaticResource ImageNoGhost}" Width="30"/>
+        </Button>
+        <Button Name ="BtnSuppGhost" Margin="438,235,0,0" Click="SuppGhost_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgSuppGhost" Source="{StaticResource ImageGhost}" Width="30"/>
+        </Button>
+        <Button Name ="BtnSuppNoGhost" Margin="438,235,0,0" Click="SuppGhost_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgSuppNoGhost" Source="{StaticResource ImageNoGhost}" Width="30"/>
+        </Button>
+
+        <!--Cleanse Buttons-->
+        <Button Name ="BtnTopCleanse" Margin="473,51,0,0" Click="TopCleanse_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgTopCleanse" Source="{StaticResource ImageCleanse}" Width="30"/>
+        </Button>
+        <Button Name ="BtnTopNoCleanse" Margin="473,51,0,0" Click="TopCleanse_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgTopNoCleanse" Source="{StaticResource ImageNoCleanse}" Width="30"/>
+        </Button>
+        <Button Name ="BtnJglCleanse" Margin="473,95,0,0" Click="JglCleanse_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgJglCleanse" Source="{StaticResource ImageCleanse}" Width="30"/>
+        </Button>
+        <Button Name ="BtnJglNoCleanse" Margin="473,95,0,0" Click="JglCleanse_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgJglNoCleanse" Source="{StaticResource ImageNoCleanse}" Width="30"/>
+        </Button>
+        <Button Name ="BtnMidCleanse" Margin="473,140,0,0" Click="MidCleanse_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgMidCleanse" Source="{StaticResource ImageCleanse}" Width="30"/>
+        </Button>
+        <Button Name ="BtnMidNoCleanse" Margin="473,140,0,0" Click="MidCleanse_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgMidNoCleanse" Source="{StaticResource ImageNoCleanse}" Width="30"/>
+        </Button>
+        <Button Name ="BtnAdcCleanse" Margin="473,185,0,0" Click="AdcCleanse_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgAdcCleanse" Source="{StaticResource ImageCleanse}" Width="30"/>
+        </Button>
+        <Button Name ="BtnAdcNoCleanse" Margin="473,185,0,0" Click="AdcCleanse_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgAdcNoCleanse" Source="{StaticResource ImageNoCleanse}" Width="30"/>
+        </Button>
+        <Button Name ="BtnSuppCleanse" Margin="473,235,0,0" Click="SuppCleanse_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgSuppCleanse" Source="{StaticResource ImageCleanse}" Width="30"/>
+        </Button>
+        <Button Name ="BtnSuppNoCleanse" Margin="473,235,0,0" Click="SuppCleanse_OnClick" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31" Visibility="Hidden">
+            <Image Name="ImgSuppNoCleanse" Source="{StaticResource ImageNoCleanse}" Width="30"/>
+        </Button>
+
+
+    </Grid>
+</Window>
